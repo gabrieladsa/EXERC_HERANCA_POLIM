@@ -1,0 +1,75 @@
+2 - Crie uma hierarquia de classes conforme abaixo com os seguintes atributos e comportamentos (observe a tabela), utilize os seus conhecimentos e distribua as características de forma que tudo o que for comum a todos os animais fique na classe Animal:
+
+<?php
+class Animal
+{
+  public $nome;
+  public $idade;
+  public $som;
+
+public function mostraAnimal(){
+echo "Nome: ".$this->nome."\nIdade: " .$this->idade."\nsom: ".$this->som."\n";
+}
+}
+
+
+class Cachorro extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Doguinho";
+    $this->idade = 5;
+    $this->som = "Latido";
+  }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Correr";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+
+}
+
+class Cavalo extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Spirit";
+    $this->idade = 3;
+    $this->som = "Relincho";
+  }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Correr";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+}
+
+  class Preguica extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Sono";
+    $this->idade = 12;
+    $this->som = "Assovio";
+  }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Subir em árvores";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+
+}
+
+$cachorro = new Cachorro;
+$cachorro->mostraAnimal();
+$cachorro->outrasCaracteristicas();
+
+$cavalo = new Cavalo;
+$cavalo->mostraAnimal();
+$cavalo->outrasCaracteristicas();
+
+$preguica = new Preguica;
+$preguica->mostraAnimal();
+$preguica->outrasCaracteristicas();
+
+?>
