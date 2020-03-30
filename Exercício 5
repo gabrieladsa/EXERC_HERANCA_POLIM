@@ -1,0 +1,39 @@
+Nome: Gabriela Abadi T30I
+
+5 - Resolva a seguinte situação utilizando os conceitos aprendidos. Crie a classe Imovel, que possui um endereço e um preço. 
+5.1 - crie uma classe Novo, que herda Imovel e possui um adicional no preço. 
+      Crie métodos de acesso e impressão deste valor adicional.
+5.2 - Crie uma classe Velho, que herda Imovel e possui um desconto no preço. 
+      Crie métodos de acesso e impressão para este desconto.
+
+<?php
+class Imovel{
+  public $enderco;
+  public $preco;
+
+}
+
+class Novo extends Imovel{
+
+  public function valor($preco, $endereco){
+    $adiconal = ($preco * 10) / 100;
+    $this->preco = $preco + $adiconal;
+    echo "O valor do imóvel será de: ".$this->preco." no endereco: ".$endereco."\n";
+  }
+}
+
+class Velho extends Imovel{
+  public function valor($preco, $endereco){
+    $adiconal = ($preco * 10) / 100;
+    $this->preco = $preco - $adiconal;
+    echo "O valor do imóvel será de: ".$this->preco." no endereco: ".$endereco."\n";
+  }
+}
+
+$casa1 = new Novo;
+$casa1->valor(10000, "Rua Brasil");
+
+$casa2 = new Velho;
+$casa2->valor(10000, "Rua Viamão");
+
+?>
