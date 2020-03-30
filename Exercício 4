@@ -1,3 +1,5 @@
+Nome: Gabriela Abadi T30I
+
 4 - Implemente uma classe Veterinario que contenha um método examinar() cujo parâmetro de entrada é um Animal, quando o animal for examinado ele deve emitir um som, passe os 3 animais com parâmetro.
 
 <?php
