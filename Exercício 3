@@ -1,0 +1,92 @@
+3 - Implemente um programa que crie os 3 tipos de animais definidos no exercício anterior e invoque o método que emite o som de cada um de forma polimórfica, isto é, independente do tipo de animal.
+
+<?php
+class Animal
+{
+  public $nome;
+  public $idade;
+  public $som;
+
+  public function mostraAnimal(){
+    echo "Nome: ".$this->nome."\nIdade: " .$this->idade."\n";
+}
+
+  public function emitirSom(){
+   echo $this->som;
+ }
+
+}
+
+
+class Cachorro extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Doguinho";
+    $this->idade = 5;
+  }
+
+  public function emitirSom(){
+   echo $this->som = "Latido";
+ }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Correr";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+
+}
+
+class Cavalo extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Spirit";
+    $this->idade = 3;
+  }
+
+  public function emitirSom(){
+    echo $this->som = "Relincho";
+ }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Correr";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+}
+
+  class Preguica extends Animal{
+  public $movimento;
+
+  public function __construct(){
+    $this->nome = "Sono";
+    $this->idade = 12;
+  }
+
+  public function emitirSom(){
+   echo $this->som = "Assovio";
+ }
+
+  public function outrasCaracteristicas(){
+    $this->movimento = "Subir em árvores";
+    echo "Movimento: ".$this->movimento."\n\n";
+  }
+
+}
+
+$cachorro = new Cachorro;
+$cachorro->mostraAnimal();
+$cachorro->outrasCaracteristicas();
+$cachorro->emitirSom();
+
+$cavalo = new Cavalo;
+$cavalo->mostraAnimal();
+$cavalo->outrasCaracteristicas();
+$cavalo->emitirSom();
+
+$preguica = new Preguica;
+$preguica->mostraAnimal();
+$preguica->outrasCaracteristicas();
+$preguica->emitirSom();
+
+?>
